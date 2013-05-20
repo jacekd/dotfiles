@@ -24,6 +24,7 @@ setopt correct
 
 # aliases
 alias ls="ls --color=auto"
+alias ll="ls -al"
 alias ..="cd .."
 alias -g gp="| grep"
 alias -g tl="| tail"
