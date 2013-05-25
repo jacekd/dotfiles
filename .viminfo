@@ -15,10 +15,12 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 
 # Command Line History (newest to oldest):
 :q!
-:Q!
 :x
-:tabnew ~/.zshrc
 :w
+:NeoComplCache
+:e ~/.vimrc
+:Q!
+:tabnew ~/.zshrc
 :tabnew package.json
 :e ~/.tmux.conf
 :`
@@ -27,7 +29,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 :b app/controllers/JobController.php
 :sNext
 :Helptags
-:e ~/.vimrc
 :TOhtml
 :Ack
 :NERDTreeToggle
@@ -80,11 +81,17 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	
+"0	CHAR	0
+	}
 "1	LINE	0
-	
+	  "scripts": {
+	    "test": "echo \"Error: no test specified\" && exit 1"
+	  },
 "2	LINE	0
+	  "main": "index.js",
+"3	LINE	0
+	
+"4	LINE	0
 	# normal
 	black="%{^[[0;30m%}"
 	red="%{^[[0;31m%}"
@@ -132,60 +139,60 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 	# foreground white = 37
 	# background red = 41
 	fgwhitebgred="%{^[[0;37;41m%}"
-"3	LINE	0
-	
-"4	LINE	0
-	ddsource ~/.zsh/zsh-prompt/zsh-prompt.zsh
 "5	LINE	0
-	source ~/.zsh/zsh-prompt/zsh-prompt.zsh
-"6	BLOCK	0
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
-	#
+	
+"6	LINE	0
+	ddsource ~/.zsh/zsh-prompt/zsh-prompt.zsh
 "7	LINE	0
+	source ~/.zsh/zsh-prompt/zsh-prompt.zsh
+"8	BLOCK	0
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+	#
+"9	LINE	0
 	function zle-line-init zle-keymap-select {
 	    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
 	      RPS2=$RPS1
@@ -193,36 +200,45 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 	      }
 	      zle -N zle-line-init
 	      zle -N zle-keymap-select
-"8	LINE	0
-	gruntddd.loadNpmTasks
-"9	LINE	0
-	      
 ""-	CHAR	0
-	}
+	 
 
 # File marks:
-'0  1  0  ~/Code/unlocalizer.dev/server.php
-'1  2  46  ~/.zsh/zsh-prompt/zsh-prompt.zsh
-'2  36  38  ~/.zshrc
-'3  3  5  ~/.zshrc
-'4  45  0  ~/git/dotfiles/.zshrc
-'5  1  0  ~/git/dotfiles/.zprofile
-'6  12  0  ~/.zshrc
-'7  38  23  ~/.zshrc
-'8  50  34  ~/.zsh/zsh-prompt/.prompt.zsh
-'9  33  22  ~/.zshrc
+'0  47  6  ~/.vimrc
+'1  2  6  ~/index.html
+'2  95  38  ~/.vimrc
+'3  2  0  ~/Code/unlocalizer.dev/Gruntfile.js
+'4  17  2  ~/Code/unlocalizer.dev/package.json
+'5  15  21  ~/Code/unlocalizer.dev/package.json
+'6  1  0  ~/git/dotfiles/test
+'7  27  16  ~/.zshrc
+'8  1  0  ~/Code/unlocalizer.dev/server.php
+'9  2  46  ~/.zsh/zsh-prompt/zsh-prompt.zsh
 
 # Jumplist (newest first):
+-'  47  6  ~/.vimrc
+-'  1  0  ~/.vimrc
+-'  2  6  ~/index.html
+-'  1  0  ~/index.html
+-'  95  38  ~/.vimrc
+-'  97  0  ~/.vimrc
+-'  2  0  ~/Code/unlocalizer.dev/Gruntfile.js
+-'  1  0  ~/Code/unlocalizer.dev/Gruntfile.js
+-'  17  2  ~/Code/unlocalizer.dev/package.json
+-'  1  0  ~/Code/unlocalizer.dev/package.json
+-'  15  21  ~/Code/unlocalizer.dev/package.json
+-'  1  0  ~/git/dotfiles/test
+-'  27  16  ~/.zshrc
+-'  1  0  ~/.zshrc
 -'  1  0  ~/Code/unlocalizer.dev/server.php
 -'  2  46  ~/.zsh/zsh-prompt/zsh-prompt.zsh
 -'  1  0  ~/.zsh/zsh-prompt/zsh-prompt.zsh
--'  36  38  ~/.zshrc
--'  1  0  ~/.zshrc
+-'  37  38  ~/.zshrc
 -'  3  5  ~/.zshrc
 -'  45  0  ~/git/dotfiles/.zshrc
 -'  1  0  ~/git/dotfiles/.zshrc
 -'  1  0  ~/git/dotfiles/.zprofile
--'  30  23  ~/.zshrc
+-'  31  23  ~/.zshrc
 -'  50  34  ~/.zsh/zsh-prompt/.prompt.zsh
 -'  47  1  ~/.zsh/zsh-prompt/.prompt.zsh
 -'  2  0  ~/.zsh/zsh-prompt/.prompt.zsh
@@ -251,7 +267,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 -'  14  0  ~/.tmux.conf
 -'  26  0  ~/.tmux.conf
 -'  16  0  ~/.tmux.conf
--'  1  0  ~/.vimrc
 -'  59  53  ~/.tmux.conf
 -'  38  0  ~/.tmux.conf
 -'  35  0  ~/.tmux.conf
@@ -287,7 +302,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 -'  7  0  ~/.vimrc
 -'  82  0  ~/.vimrc
 -'  92  0  ~/.vimrc
--'  95  0  ~/.vimrc
 -'  76  0  ~/.vimrc
 -'  71  0  ~/.vimrc
 -'  63  0  ~/.vimrc
@@ -297,23 +311,311 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 -'  11  0  ~/.vimrc
 -'  4  0  ~/.vimrc
 -'  1  0  ~/Â.vimrc
--'  1  0  ~/index.html
 -'  6  0  ~/.tmux.conf
 -'  170  0  ~/Code/unlocalizer.dev/app/controllers/JobController.php
 -'  69  4  ~/Code/unlocalizer.dev/__Tagbar__
--'  111  0  ~/Code/unlocalizer.dev/__Tagbar__
--'  1  0  /usr/share/vim/vim73/doc/help.txt
--'  1  0  ~/Code/unlocalizer.dev/app/controllers/AuthController.php
--'  7  0  ~/Code/unlocalizer.dev/app/controllers/JobController.php
--'  135  4  ~/Code/unlocalizer.dev/__Tagbar__
--'  36  38  ~/.zshrc
--'  50  33  ~/.zsh/zsh-prompt/zsh-prompt.zsh
--'  49  0  ~/.zsh/zsh-prompt/zsh-prompt.zsh
--'  2  46  ~/.zsh/zsh-prompt/zsh-prompt.zsh
--'  1  0  ~/.zsh/zsh-prompt/zsh-prompt.zsh
--'  36  38  ~/.zshrc
 
 # History of marks within files (newest to oldest):
+
+> ~/.vimrc
+	"	47	6
+	^	95	41
+	.	48	0
+	+	56	19
+	+	57	23
+	+	58	19
+	+	59	22
+	+	60	20
+	+	61	17
+	+	70	2
+	+	65	14
+	+	69	9
+	+	54	0
+	+	54	0
+	+	54	0
+	+	101	9
+	+	101	1
+	+	101	0
+	+	101	0
+	+	37	27
+	+	38	0
+	+	49	2
+	+	54	0
+	+	52	0
+	+	74	45
+	+	38	37
+	+	75	2
+	+	73	0
+	+	65	0
+	+	73	0
+	+	65	0
+	+	39	36
+	+	52	0
+	+	65	0
+	+	73	0
+	+	47	0
+	+	40	17
+	+	81	2
+	+	79	10
+	+	78	0
+	+	101	0
+	+	11	0
+	+	32	2
+	+	13	26
+	+	13	0
+	+	13	26
+	+	31	0
+	+	30	0
+	+	29	0
+	+	26	0
+	+	25	0
+	+	24	0
+	+	23	0
+	+	22	0
+	+	21	0
+	+	22	0
+	+	20	0
+	+	19	0
+	+	18	0
+	+	17	0
+	+	16	0
+	+	15	0
+	+	14	0
+	+	80	0
+	+	101	0
+	+	82	0
+	+	41	14
+	+	42	14
+	+	43	21
+	+	100	0
+	+	97	0
+	+	14	2
+	+	18	4
+	+	20	6
+	+	23	6
+	+	26	6
+	+	27	6
+	+	98	0
+	+	97	0
+	+	35	24
+	+	83	11
+	+	83	11
+	+	91	5
+	+	96	0
+	+	35	9
+	+	35	9
+	+	44	0
+	+	35	0
+	+	35	0
+	+	35	0
+	+	98	0
+	+	93	0
+	+	35	0
+	+	35	0
+	+	35	0
+	+	34	0
+	+	3	0
+	+	6	27
+	+	8	0
+	+	7	21
+	+	5	0
+	+	95	38
+	+	48	0
+
+> ~/index.html
+	"	2	6
+	^	2	7
+	.	2	6
+	+	1	0
+	+	1	3
+	+	1	0
+	+	1	0
+	+	1	6
+	+	4	7
+	+	2	6
+
+> ~/Code/unlocalizer.dev/Gruntfile.js
+	"	2	0
+	^	2	0
+	.	3	0
+	+	1	34
+	+	3	0
+
+> ~/Code/unlocalizer.dev/package.json
+	"	17	2
+	^	17	3
+	.	17	0
+	+	2	22
+	+	5	0
+	+	15	22
+	+	16	21
+	+	17	0
+
+> ~/Code/unlocalizer.dev/ControlP
+	"	10	0
+	.	2	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	2	0
+
+> ~/Code/grunt-test/Gruntfile.js
+	"	13	41
+	^	13	42
+	.	13	41
+	+	1	33
+	+	16	0
+	+	10	3
+	+	9	4
+	+	9	6
+	+	9	53
+	+	8	6
+	+	9	0
+	+	5	0
+	+	8	0
+	+	17	17
+	+	10	4
+	+	17	0
+	+	11	45
+	+	12	43
+	+	12	44
+	+	15	43
+	+	3	9
+	+	12	40
+	+	15	39
+	+	13	41
+	o	1	0
+
+> ~/git/dotfiles/test
+	"	1	0
+
+> ~/.zshrc
+	"	27	16
+	^	27	17
+	.	27	16
+	+	40	0
+	+	12	40
+	+	20	0
+	+	19	0
+	+	16	0
+	+	15	0
+	+	13	10
+	+	23	14
+	+	26	26
+	+	28	16
+	+	29	21
+	+	30	19
+	+	29	19
+	+	30	4
+	+	34	23
+	+	40	0
+	+	38	12
+	+	39	75
+	+	40	0
+	+	12	0
+	+	12	0
+	+	1	0
+	+	10	32
+	+	4	0
+	+	3	5
+	+	37	38
+	+	27	16
 
 > ~/Code/unlocalizer.dev/server.php
 	"	1	0
@@ -356,37 +658,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 	+	1	0
 	+	2	0
 
-> ~/.zshrc
-	"	36	38
-	^	36	39
-	.	36	38
-	+	39	0
-	+	12	40
-	+	20	0
-	+	19	0
-	+	16	0
-	+	15	0
-	+	13	10
-	+	23	14
-	+	26	26
-	+	27	16
-	+	28	21
-	+	29	19
-	+	28	19
-	+	29	4
-	+	33	23
-	+	39	0
-	+	37	12
-	+	38	75
-	+	39	0
-	+	12	0
-	+	12	0
-	+	1	0
-	+	10	32
-	+	4	0
-	+	3	5
-	+	36	38
-
 > ~/git/dotfiles/.zshrc
 	"	45	0
 
@@ -402,32 +673,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 	+	50	8
 	+	33	23
 	+	50	35
-
-> ~/Code/grunt-test/Gruntfile.js
-	"	10	2
-	^	14	40
-	.	14	39
-	+	1	33
-	+	15	0
-	+	10	3
-	+	9	4
-	+	9	6
-	+	9	53
-	+	8	6
-	+	9	0
-	+	5	0
-	+	8	0
-	+	16	17
-	+	10	4
-	+	16	0
-	+	11	45
-	+	12	43
-	+	12	44
-	+	14	43
-	+	3	9
-	+	12	40
-	+	14	39
-	o	1	0
 
 > ~/Code/grunt-test/node_modules/grunt-contrib-sass/tasks/sass.js
 	"	1	0
@@ -482,111 +727,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 	+	53	22
 	+	54	7
 
-> ~/.vimrc
-	"	1	0
-	^	7	22
-	.	5	0
-	+	54	22
-	+	55	23
-	+	56	19
-	+	57	23
-	+	58	19
-	+	59	22
-	+	60	20
-	+	61	17
-	+	70	2
-	+	65	14
-	+	69	9
-	+	54	0
-	+	54	0
-	+	54	0
-	+	99	9
-	+	99	1
-	+	99	0
-	+	99	0
-	+	37	27
-	+	38	0
-	+	49	2
-	+	54	0
-	+	52	0
-	+	74	45
-	+	38	37
-	+	75	2
-	+	73	0
-	+	65	0
-	+	73	0
-	+	65	0
-	+	39	36
-	+	52	0
-	+	65	0
-	+	73	0
-	+	47	0
-	+	40	17
-	+	81	2
-	+	79	10
-	+	78	0
-	+	99	0
-	+	11	0
-	+	32	2
-	+	13	26
-	+	13	0
-	+	13	26
-	+	31	0
-	+	30	0
-	+	29	0
-	+	26	0
-	+	25	0
-	+	24	0
-	+	23	0
-	+	22	0
-	+	21	0
-	+	22	0
-	+	20	0
-	+	19	0
-	+	18	0
-	+	17	0
-	+	16	0
-	+	15	0
-	+	14	0
-	+	80	0
-	+	99	0
-	+	82	0
-	+	41	14
-	+	42	14
-	+	43	21
-	+	98	0
-	+	95	0
-	+	14	2
-	+	18	4
-	+	20	6
-	+	23	6
-	+	26	6
-	+	27	6
-	+	96	0
-	+	95	0
-	+	35	24
-	+	83	11
-	+	83	11
-	+	91	5
-	+	94	0
-	+	35	9
-	+	35	9
-	+	44	0
-	+	35	0
-	+	35	0
-	+	35	0
-	+	96	0
-	+	93	0
-	+	35	0
-	+	35	0
-	+	35	0
-	+	34	0
-	+	3	0
-	+	6	27
-	+	8	0
-	+	7	21
-	+	5	0
-
 > ~/Code/unlocalizer.dev/app/routes.php
 	"	1	0
 	^	59	0
@@ -595,110 +735,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 	+	18	4
 	+	61	0
 	+	59	0
-
-> ~/Code/unlocalizer.dev/ControlP
-	"	3	0
-	.	2	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	1	0
-	+	2	0
 
 > ~/Code/unlocalizer.dev/app/controllers/JobController.php
 	"	390	3
@@ -735,15 +771,6 @@ $\=s:ProcessLine(0, submatch(0), "\\V\\^\\(\\s\\{-}\\)# \\?\\(\\_.\\{-}\\)\\$", 
 
 > ~/Â.vimrc
 	"	1	0
-
-> ~/index.html
-	"	1	0
-	.	1	0
-	+	1	0
-	+	1	3
-	+	1	0
-	+	1	0
-	+	1	0
 
 > ~/Code/unlocalizer.dev/app/controllers/AuthController.php
 	"	1	0
