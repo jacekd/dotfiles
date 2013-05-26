@@ -42,6 +42,7 @@ set autoindent
 set smartindent
 set pastetoggle=<F12>
 let mapleader=","
+set cursorline
 
 " history {
   set history=1000
