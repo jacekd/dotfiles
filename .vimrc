@@ -43,6 +43,8 @@ set smartindent
 set pastetoggle=<F12>
 let mapleader=","
 set cursorline
+colorscheme lucius
+LuciusLight
 
 " history {
   set history=1000
