@@ -32,6 +32,8 @@ alias -s php=vim
 alias -s js=vim
 alias -s scss=vim
 alias -s log="less -Mn"
+alias s="git status"
+alias c="git commit -am"
 
 # sourcing
 source ~/.zsh/zsh-prompt/zsh-prompt.zsh

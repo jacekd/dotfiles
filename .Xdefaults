@@ -14,7 +14,17 @@ URxvt.scrollBar:          false
 URxvt.saveLines:          20000
 URxvt*lineSpace:          4
 URxvt*cursorColor:        #cc0000
+URxvt*internalBorder:     5
 
+! Extensions
+URxvt.perl-lib:           /usr/lib/urxvt/perl
+URxvt.perl-ext-common:    default,matcher,clipboard,copypaste
+URxvt.matcher.launcher:   x-www-browser
+URxvt.matcher.button:     1
+URxvt.matcher.pattern.1:  \\bwww\\.[\\w-]+\\.[\\w./?&@#-=]*[\\w/-]
+!URxvt.keysym.Mod4-c:      perl:clipboard:copy
+!URxvt.keysym.Mod4-v:      perl:clipboard:paste
+!URxvt.keysym.S-Insert:    perl:clipboard:paste
 
 
 *background: #f1f1f1
@@ -38,8 +48,8 @@ URxvt*cursorColor:        #cc0000
 *color5:  #822873
 *color13: #D255BE
 !cyan
-*color6:  #56A3CD
-*color14: #46D7C3
+*color6:  #038e82
+*color14: #05d2c1
 !white
 *color7:  #ffffff
 *color15: #efefef

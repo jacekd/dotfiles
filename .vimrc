@@ -1,11 +1,10 @@
 " Vimrc file
 " maintained by Jacek Dominiak
 set nocompatible "starts with the basics
-
-filetype off
-" execute pathogen#infect()
+execute pathogen#infect()
 call pathogen#incubate()
 call pathogen#helptags()
+
 syntax on
 filetype plugin indent on
 
@@ -70,6 +69,11 @@ LuciusLight
   set smartcase
   set hlsearch
   set incsearch
+" }
+"
+" auto save view {
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
 " }
 
 " visual characters {
