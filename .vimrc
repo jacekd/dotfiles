@@ -28,6 +28,21 @@ function! SuperCleverTab()
     endif
   endif
 endfunction
+
+" Make sure Vim returns to the same line when you reopen a file.
+augroup line_return
+    au!
+    au BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \     execute 'normal! g`"zvzz' |
+        \ endif
+augroup END
+
+" autofolding with preserving self folding
+augroup vimrc
+  au BufReadPre * setlocal foldmethod=indent
+  au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
+augroup END
 " }
 
 set number
@@ -40,8 +55,26 @@ set encoding=utf-8
 set autoindent
 set smartindent
 set pastetoggle=<F12>
-let mapleader=","
+" let mapleader=","
 set cursorline
+set backspace=indent,eol,start
+set autowrite
+set autoread
+set colorcolumn=120
+"Bubble single lines (kicks butt)
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+
+"Bubble multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
+
+" easier window navigation
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
 colorscheme lucius
 LuciusLight
 
@@ -69,6 +102,7 @@ LuciusLight
   set smartcase
   set hlsearch
   set incsearch
+  nnoremap <CR> :noh<CR><CR>
 " }
 "
 " auto save view {
@@ -79,11 +113,29 @@ autocmd BufWinEnter *.* silent loadview
 " visual characters {
   set list 
   set listchars=tab:>.,trail:.,extends:#,nbsp:.
+  set fillchars=vert:│
 " }
 
 " tab completition {
   set wildmode=longest,list,full
   set wildmenu
+  set wildmenu
+  set wildmode=list:longest
+
+  set wildignore+=.hg,.git,.svn                    " Version control
+  set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+  set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+  set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+  set wildignore+=*.spl                            " compiled spelling word
+  set wildignore+=*.sw?                            " Vim swap files
+  set wildignore+=*.DS_Store                       " OSX bullshit
+  
+  set wildignore+=*.luac                           " Lua byte code
+  
+  set wildignore+=migrations                       " Django migrations
+  set wildignore+=*.pyc                            " Python byte code
+  
+  set wildignore+=*.orig            "
   inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 " }
 
@@ -101,4 +153,5 @@ map <Leader>' :TagbarToggle<CR>
 
 let g:neocomplcache_enable_at_startup=1
 " }
+
 

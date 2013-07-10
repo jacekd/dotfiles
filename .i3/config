@@ -135,10 +135,16 @@ client.focused_inactive #FFFFFF #f1f1f1 #444444 #484e50
 client.unfocused        #FFFFFF #f1f1f1 #444444 #292d2e
 client.urgent           #cc0000 #f1f1f1 #444444 #900000
 
+# volume control
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
 # Autostart
-exec syndeamon -d
+exec syndaemon -d -i 0.8
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xrdb -load ~/.Xdefaults
 # exec --no-startup-in dmenu_path | dmenu -nb '#ffffff' -nf '#333333' -sb '#0099CC' -sf '#ffffff' -fn 'xft:Ubuntu Mono:size=9'
 exec feh --no-start-id feh --bg-scale /home/jacek/images/wallpapers/THESUIT_wallpaper.png
-exec xautolock -time 5 -locker 'i3lock'
+exec xautolock -time 5 -locker 'i3lock; xset dpms force off'
+
