@@ -43,6 +43,12 @@ augroup vimrc
   au BufReadPre * setlocal foldmethod=indent
   au BufWinEnter * if &fdm == 'syntax' | setlocal foldmethod=manual | endif
 augroup END
+
+" change bar color based on the mode
+if version >= 700
+  au InsertEnter * hi StatusLine term=reverse ctermfg=15 ctermbg=32 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=233 ctermbg=250 
+endif
 " }
 
 set number
