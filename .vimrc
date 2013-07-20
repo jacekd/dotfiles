@@ -81,6 +81,10 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Buffer switch
+map <C-Tab> :bnext<cr>
+map <C-S-Tab> :bprevious<cr>
+
 colorscheme lucius
 LuciusLight
 
@@ -142,7 +146,7 @@ autocmd BufWinEnter *.* silent loadview
   set wildignore+=*.pyc                            " Python byte code
   
   set wildignore+=*.orig            "
-  inoremap <Tab> <C-R>=SuperCleverTab()<cr>
+  " inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 " }
 
 " plugins {
