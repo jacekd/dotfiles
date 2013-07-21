@@ -19,19 +19,31 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+# cd .. function 
+function ..() {
+  arg=${1}
+  dir=""
+  while (( arg > 0 )); do
+    dir="../${dir}"
+    arg=$((${arg}-1))
+  done
+  cd $dir
+}
+
 # command correction
 setopt correct
 
 # aliases
 alias ls="ls --color=auto"
 alias ll="ls -al"
-alias ..="cd .."
+#alias ..="cd .."
 alias -g gp="| grep"
 alias -g tl="| tail"
 alias -s php=vim
 alias -s js=vim
 alias -s scss=vim
 alias -s pdf=zathura
+alias -s zip=unzip
 alias -s log="less -Mn"
 alias s="git status"
 alias c="git commit -am"
