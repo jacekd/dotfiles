@@ -145,6 +145,6 @@ exec syndaemon -d -i 0.8
 exec --no-startup-id xmodmap ~/.Xmodmap
 exec --no-startup-id xrdb -load ~/.Xdefaults
 # exec --no-startup-in dmenu_path | dmenu -nb '#ffffff' -nf '#333333' -sb '#0099CC' -sf '#ffffff' -fn 'xft:Ubuntu Mono:size=9'
-exec feh --no-start-id feh --bg-scale /home/jacek/images/wallpapers/THESUIT_wallpaper.png
+exec feh --no-start-id feh --bg-scale /home/jacek/images/wallpapers/carrot.png
 exec xautolock -time 5 -locker 'i3lock; xset dpms force off'
 
