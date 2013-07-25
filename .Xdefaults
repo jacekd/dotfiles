@@ -12,7 +12,7 @@ URxvt*font: xft:Ubuntu Mono:size=9
 
 URxvt.scrollBar:          false
 URxvt.saveLines:          20000
-URxvt*lineSpace:          4
+URxvt*lineSpace:          10
 URxvt*cursorColor:        #cc0000
 URxvt*internalBorder:     5
 

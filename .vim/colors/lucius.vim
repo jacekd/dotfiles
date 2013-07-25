@@ -254,8 +254,6 @@ let s:normal_items = [
             \ ]
 
 let s:bold_items = [
-            \ "DiffText", "FoldColumn", "Folded", "StatusLine", "TabLineSel",
-            \ "Title",
             \ ]
 
 let s:underline_items = [
@@ -659,7 +657,7 @@ hi Underlined   guifg=fg
 
 if s:use_bold == 1
     for s:item in s:bold_items
-        exec "hi " . s:item . " gui=bold cterm=bold term=none"
+        exec "hi " . s:item . " gui=none cterm=none term=none"
     endfor
 endif
 

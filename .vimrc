@@ -45,10 +45,10 @@ augroup vimrc
 augroup END
 
 " change bar color based on the mode
-if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermfg=15 ctermbg=32 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=233 ctermbg=250 
-endif
+"if version >= 700
+"  au InsertEnter * hi StatusLine term=reverse ctermfg=15 ctermbg=32
+"  au InsertLeave * hi StatusLine term=reverse ctermfg=233 ctermbg=250 
+"endif
 " }
 
 set number
@@ -84,6 +84,8 @@ nmap <C-l> <C-w>l
 " Buffer switch
 map <C-Tab> :bnext<cr>
 map <C-S-Tab> :bprevious<cr>
+map <Leader>] :bnext<cr>
+map <Leader>[ :bprevious<cr>
 
 colorscheme lucius
 LuciusLight
@@ -123,7 +125,7 @@ autocmd BufWinEnter *.* silent loadview
 " visual characters {
   set list 
   set listchars=tab:>.,trail:.,extends:#,nbsp:.
-  set fillchars=vert:│
+  set fillchars=vert:\ 
 " }
 
 " tab completition {
@@ -164,4 +166,11 @@ map <Leader>' :TagbarToggle<CR>
 let g:neocomplcache_enable_at_startup=1
 " }
 
-
+" gui {
+if has("gui_running")
+  set guioptions=e
+  set guifont=Ubuntu\ Mono\ 10
+  set linespace=5
+  let g:lucius_use_bold=0
+endif
+" }
