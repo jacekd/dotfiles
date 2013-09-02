@@ -67,6 +67,7 @@ set backspace=indent,eol,start
 set autowrite
 set autoread
 set colorcolumn=120
+set clipboard=unnamedplus
 "Bubble single lines (kicks butt)
 nmap <C-Up> ddkP
 nmap <C-Down> ddp
@@ -87,8 +88,20 @@ map <C-S-Tab> :bprevious<cr>
 map <Leader>] :bnext<cr>
 map <Leader>[ :bprevious<cr>
 
+" Tab switch
+map <C-Right> :tabnext<cr>
+map <C-Left> :tabprevious<cr>
+
+" Global paste
+map <S-Insert> "+p<cr>
+
 colorscheme lucius
 LuciusLight
+
+" some remapping
+cmap W w
+cmap Q q
+
 
 " history {
   set history=1000
@@ -97,15 +110,16 @@ LuciusLight
 
 " Statusline {
   set laststatus=2
-  set statusline=
-  set statusline +=\ %n\            "buffer number
-  set statusline +=%{&ff}            "file format
-  set statusline +=%y                "file type
-  set statusline +=\ %<%F            "full path
-  set statusline +=%m                "modified flag
-  set statusline +=%=%5l             "current line
-  set statusline +=/%L               "total lines
-  set statusline +=%4v\            "virtual column number
+"  set statusline=
+"  set statusline +=\ %n\            "buffer number
+"  set statusline +=%{&ff}            "file format
+"  set statusline +=%y                "file type
+"  set statusline +=\ %<%F            "full path
+"  set statusline +=%m                "modified flag
+"  set statusline +=%=%5l             "current line
+"  set statusline +=/%L               "total lines
+"  set statusline +=%4v\            "virtual column number
+set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
 " }
 
 " search {
@@ -129,25 +143,25 @@ autocmd BufWinEnter *.* silent loadview
 " }
 
 " tab completition {
-  set wildmode=longest,list,full
-  set wildmenu
-  set wildmenu
-  set wildmode=list:longest
+  " set wildmode=longest,list,full
+  " set wildmenu
+  " set wildmenu
+  " set wildmode=list:longest
 
-  set wildignore+=.hg,.git,.svn                    " Version control
-  set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
-  set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
-  set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
-  set wildignore+=*.spl                            " compiled spelling word
-  set wildignore+=*.sw?                            " Vim swap files
-  set wildignore+=*.DS_Store                       " OSX bullshit
-  
-  set wildignore+=*.luac                           " Lua byte code
-  
-  set wildignore+=migrations                       " Django migrations
-  set wildignore+=*.pyc                            " Python byte code
-  
-  set wildignore+=*.orig            "
+  " set wildignore+=.hg,.git,.svn                    " Version control
+  " set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+  " set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+  " set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+  " set wildignore+=*.spl                            " compiled spelling word
+  " set wildignore+=*.sw?                            " Vim swap files
+  " set wildignore+=*.DS_Store                       " OSX bullshit
+  " 
+  " set wildignore+=*.luac                           " Lua byte code
+  " 
+  " set wildignore+=migrations                       " Django migrations
+  " set wildignore+=*.pyc                            " Python byte code
+  " 
+  " set wildignore+=*.orig            "
   " inoremap <Tab> <C-R>=SuperCleverTab()<cr>
 " }
 
@@ -169,8 +183,9 @@ let g:neocomplcache_enable_at_startup=1
 " gui {
 if has("gui_running")
   set guioptions=e
-  set guifont=Ubuntu\ Mono\ 10
+  set guifont=Liberation\ Mono\ for\ Powerline\ 9
   set linespace=5
   let g:lucius_use_bold=0
+  set showtabline=2
 endif
 " }

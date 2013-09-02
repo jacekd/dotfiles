@@ -8,11 +8,13 @@ Xft*lcdfilter:        lcdslight
 !Xft.autohint:         true
 
 URxvt*font: -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
-URxvt*font: xft:Ubuntu Mono:size=9
+!URxvt*font: xft:Ubuntu Mono:size=9
+URxvt*font: xft:Liberation Mono for Powerline:size=9
 
 URxvt.scrollBar:          false
 URxvt.saveLines:          20000
-URxvt*lineSpace:          10
+URxvt*lineSpace:          5
+URxvt.letterSpace:        -2
 URxvt*cursorColor:        #cc0000
 URxvt*internalBorder:     5
 
