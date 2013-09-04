@@ -182,7 +182,7 @@ let g:neocomplcache_enable_at_startup=1
 
 " gui {
 if has("gui_running")
-  set guioptions=e
+  set guioptions=em
   set guifont=Liberation\ Mono\ for\ Powerline\ 9
   set linespace=5
   let g:lucius_use_bold=0
