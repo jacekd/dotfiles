@@ -47,6 +47,8 @@ alias -s zip=unzip
 alias -s log="less -Mn"
 alias s="git status"
 alias c="git commit -am"
+alias p="git push"
+alias chrome="google-chrome"
 
 # sourcing
 source ~/.zsh/zsh-prompt/zsh-prompt.zsh

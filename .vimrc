@@ -1,6 +1,7 @@
 " Vimrc file
 " maintained by Jacek Dominiak
 set nocompatible "starts with the basics
+filetype off
 execute pathogen#infect()
 call pathogen#incubate()
 call pathogen#helptags()
