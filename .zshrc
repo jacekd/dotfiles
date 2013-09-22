@@ -4,8 +4,8 @@ colors
 
 # Environment variables
 export EDITOR="vim"
-#export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-export GREP_OPTIONS="--color"
+export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+#export GREP_OPTIONS="--color"
 export ACK_COLOR_MATCH="red"
 export WORDCHARS='*?[]~&;!$%^<>'
 

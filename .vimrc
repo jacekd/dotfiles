@@ -54,7 +54,7 @@ augroup END
 
 set number
 set nowrap
-set background=light
+set background=dark
 set title " set window title
 set softtabstop=2 tabstop=2 shiftwidth=2
 set expandtab "spaces instead of tabs
@@ -96,9 +96,9 @@ map <C-Left> :tabprevious<cr>
 " Global paste
 map <S-Insert> "+p<cr>
 
-colorscheme lucius
-LuciusLight
-
+" colorscheme lucius
+" LuciusLight
+colorscheme molokai
 " some remapping
 cmap W w
 cmap Q q
@@ -184,7 +184,8 @@ let g:neocomplcache_enable_at_startup=1
 " gui {
 if has("gui_running")
   set guioptions=em
-  set guifont=Liberation\ Mono\ for\ Powerline\ 9
+"  set guifont=Liberation\ Mono\ for\ Powerline\ 9
+  set guifont=Monaco:h12
   set linespace=5
   let g:lucius_use_bold=0
   set showtabline=2
