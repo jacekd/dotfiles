@@ -4,8 +4,8 @@ colors
 
 # Environment variables
 export EDITOR="vim"
-export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
-#export GREP_OPTIONS="--color"
+#export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+export GREP_OPTIONS="--color"
 export ACK_COLOR_MATCH="red"
 export WORDCHARS='*?[]~&;!$%^<>'
 
@@ -34,7 +34,8 @@ function ..() {
 setopt correct
 
 # aliases
-alias ls="ls --color=auto"
+# alias ls="ls --color=auto" # coloring on linux
+alias ls="ls -G" # coloring on mac
 alias ll="ls -al"
 #alias ..="cd .."
 alias -g gp="| grep"
@@ -52,8 +53,8 @@ alias chrome="google-chrome"
 
 # sourcing
 source ~/.zsh/zsh-prompt/zsh-prompt.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # path extension
 if [ -d "$HOME/.local/bin" ]; then
