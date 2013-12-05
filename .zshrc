@@ -36,25 +36,27 @@ setopt correct
 # aliases
 # alias ls="ls --color=auto" # coloring on linux
 alias ls="ls -G" # coloring on mac
+alias l="ls"
 alias ll="ls -al"
 #alias ..="cd .."
 alias -g gp="| grep"
 alias -g tl="| tail"
-alias -s php=vim
-alias -s js=vim
-alias -s scss=vim
-alias -s pdf=zathura
-alias -s zip=unzip
+alias -s php=mvim
+alias -s js=mvim
+alias -s scss=mvim
 alias -s log="less -Mn"
 alias s="git status"
 alias c="git commit -am"
 alias p="git push"
-alias chrome="google-chrome"
+alias u="vagrant up"
+alias h="vagrant halt"
+alias g="vagrant ssh"
+alias mvim="open -a macvim"
 
 # sourcing
 source ~/.zsh/zsh-prompt/zsh-prompt.zsh
-# source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # path extension
 if [ -d "$HOME/.local/bin" ]; then
