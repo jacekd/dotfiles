@@ -1,6 +1,9 @@
 setopt prompt_subst
 autoload colors
 colors
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' list-colors 'exfxcxdxbxegedabagacad'
 
 # Environment variables
 export EDITOR="vim"
