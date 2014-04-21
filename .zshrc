@@ -12,7 +12,7 @@ export WORDCHARS='*?[]~&;!$%^<>'
 # VI mode enable and indicator on prompt
 bindkey -v
 function zle-line-init zle-keymap-select {
-  RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+RPS1="$(git_super_status) ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
   RPS2=$RPS1
     zle reset-prompt
   }
@@ -45,23 +45,19 @@ alias -s php=mvim
 alias -s js=mvim
 alias -s scss=mvim
 alias -s log="less -Mn"
-alias s="git status"
+alias s="git status -sb"
 alias c="git commit -am"
 alias p="git push"
-alias u="vagrant up"
-alias h="vagrant halt"
-alias g="vagrant ssh"
-alias mvim="open -a macvim"
+alias g="git pull"
+alias h="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # sourcing
 source ~/.zsh/zsh-prompt/zsh-prompt.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+source ~/.zsh/git-prompt/zshrc.sh
 
 # path extension
 if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
-# java settings 
-export _JAVA_OPTIONS='-Dswing.aatext=true -Dawt.useSystemAAFontSettings=on -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'

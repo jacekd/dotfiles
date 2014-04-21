@@ -98,7 +98,7 @@ map <S-Insert> "+p<cr>
 
 " colorscheme lucius
 " LuciusLight
-colorscheme default
+colorscheme Tomorrow
 " some remapping
 cmap W w
 cmap Q q
