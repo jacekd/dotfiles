@@ -18,3 +18,5 @@
   h = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   p = push
   g = pull
+  e = checkout
+  b = checkout -
