@@ -19,4 +19,4 @@
   p = push
   g = pull
   e = checkout
-  b = checkout -
+  m = merge --no-ff
