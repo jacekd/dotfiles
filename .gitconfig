@@ -1,8 +1,6 @@
 [user]
 	name = Jacek Dominiak
 	email = jacek@effortable.com
-[push]
-	default = simple
 [alias]
   s = status -sb
   c = commit -am
